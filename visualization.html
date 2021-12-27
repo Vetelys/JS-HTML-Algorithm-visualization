@@ -5,20 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css"/>
-    <title>Maze Generation</title>
+    <title>Algorithm Visualizations</title>
+    <script src="visualizeSearch.js"></script>
 </head>
-
 <body>
+
     <ul>
         <li><a href="index.html">Maze Generation</a></li>
         <li><a href="visualization.html">Search Algorithm Visualization</a></li>
     </ul>
-    <div>
-        <button id="generatebutton" onclick="generateMaze()">Generate</button>
-    </div>
-    <div id="mazecanvas">
+
+    <label for="algorithms">Select search algorithm:</label>
+
+    <select name="algorithms" id="algorithms" onChange = "setAlgorithm()">
+      <option value="A*">A*</option>
+      <option value="Dijkstra">Dijkstra</option>
+      <option value="BFS">BFS</option>
+      <option value="DFS">DFS</option>
+    </select> 
+
+    <div id="algocanvas">
         <canvas id="canvas" width="600" height="600"></canvas>
-        <script src="generateMaze.js"></script>
     </div>
     
 </body>
